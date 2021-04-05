@@ -25,12 +25,12 @@ read()
       return {
        id: e.payload.doc.id,
 
-       nom: e.payload.doc.data()["titre"],
-       tel: e.payload.doc.data()["description"],
+       nom: e.payload.doc.data()["nom"],
+       tel: e.payload.doc.data()["tel"],
        grade: e.payload.doc.data()["grade"],
        login: e.payload.doc.data()["login"],
        mdp: e.payload.doc.data()["mdp"],
-       adresse: e.payload.doc.data()["mdp"],
+       adresse: e.payload.doc.data()["adresse"],
 
 
 
