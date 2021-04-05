@@ -48,6 +48,8 @@ for(let us of this.users)
 {
 if((us.login==this.user.login)&&(us.mdp==this.user.mdp))
 {
+  localStorage.setItem("grade",us.grade);
+  localStorage.setItem("id",us.id);
 window.location.replace("/#/accueil");
 this.b=true;
 
