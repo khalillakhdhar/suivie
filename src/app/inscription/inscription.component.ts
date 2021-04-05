@@ -13,6 +13,7 @@ user:Utilisateur;
 
   ngOnInit(): void {
     this.user=new Utilisateur();
+    this.user.grade="user";
   }
  adduser()
  {
