@@ -11,9 +11,7 @@
                       <div class="table-responsive">
                           <table class="table">
                               <thead class=" text-primary">
-                                  <th>
-                                      ID
-                                  </th>
+                                 
                                   <th>
                                       Nom
                                   </th>
@@ -21,17 +19,18 @@
                                       Adresse
                                   </th>
                                   <th>
-                                      Grade
+                                      Téléphone
                                   </th>
                                   <th>
+                                      Grade
+                                  </th>
+                                  <th *ngIf="grade=='admin'" >
                                       Action
                                   </th>
                               </thead>
                               <tbody>
                                   <tr *ngFor="let user of users">
-                                      <td>
-                                          {{user.id}}
-                                      </td>
+                                     
                                       <td>
                                           {{user.nom}}
                                       </td>
@@ -39,10 +38,13 @@
                                           {{user.adresse}}
                                       </td>
                                       <td>
+                                          {{user.tel}}
+                                      </td>
+                                      <td>
                                           {{user.grade}}
                                       </td>
-                                      <td class="text-primary">
-                                          $36,738
+                                      <td *ngIf="grade=='admin'">
+                                          <a class="btn btn-danger" (click)="delete(user.id)">Supprimer</a>
                                       </td>
                                   </tr>
                                  

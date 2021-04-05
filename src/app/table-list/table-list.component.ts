@@ -8,12 +8,13 @@ import { UserService } from 'app/services/user.service';
   styleUrls: ['./table-list.component.css']
 })
 export class TableListComponent implements OnInit {
-
+grade:string;
 users:Utilisateur[];
 constructor(private userService:UserService) { }
 
 ngOnInit(): void {
   this.read();
+  this.grade=localStorage.getItem("grade");
 }
 read()
 {
@@ -42,7 +43,10 @@ read()
 }
 delete(id)
 {
-  
+  if(confirm("êtes vous sûre de vouloir supprimer? "))
+  {
+    this.userService.delete_User(id);
+  }
 }
 
 }

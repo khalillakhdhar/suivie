@@ -14,6 +14,7 @@ b=false;
 constructor(private userService:UserService) { }
 
 ngOnInit(): void {
+  localStorage.clear();
   this.user=new Utilisateur();
   this.read();
 }
