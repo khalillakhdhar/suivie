@@ -8,12 +8,12 @@ export const environment = {
   firebase:
   {
 
-    apiKey: "AIzaSyDOg582_L9x4LOs25-Cg771WJnBmBuXow4",
-    authDomain: "suivieiot.firebaseapp.com",
-    projectId: "suivieiot",
-    storageBucket: "suivieiot.appspot.com",
-    messagingSenderId: "711898848632",
-    appId: "1:711898848632:web:aaf5eb5fe63010faa47c8d",
-    measurementId: "G-M1C5C20LH1"
+    apiKey: "AIzaSyAEOFNqMQNVm620A4iI1wT2pZ03gU40Slg",
+    authDomain: "ioturgence.firebaseapp.com",
+    projectId: "ioturgence",
+    storageBucket: "ioturgence.appspot.com",
+    messagingSenderId: "734971024773",
+    appId: "1:734971024773:web:6c13de72e7703b93c4a0ec",
+    measurementId: "G-S66YLMEHRB"
   }
 };
