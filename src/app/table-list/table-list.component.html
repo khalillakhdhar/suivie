@@ -7,7 +7,11 @@
                       <h4 class="card-title ">Liste des employées</h4>
                       <p class="card-category"> Vous trouvez ici l'archive du staff </p>
                   </div>
+
                   <div class="card-body">
+                      <br><br>
+                      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+
                       <div class="table-responsive">
                           <table class="table">
                               <thead class=" text-primary">
