@@ -15,7 +15,6 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
-import {NgxPaginationModule} from 'ngx-pagination';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -40,7 +39,7 @@ import { SearchPipe } from './pipes/search.pipe';
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,
-    FormsModule,NgxPaginationModule,
+    FormsModule,
         ReactiveFormsModule,
     HttpClientModule,
     ComponentsModule,
