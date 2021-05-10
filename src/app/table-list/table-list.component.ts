@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Utilisateur } from 'app/classes/utilisateur';
 import { UserService } from 'app/services/user.service';
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 
 @Component({
   selector: 'app-table-list',
@@ -9,10 +10,10 @@ import { UserService } from 'app/services/user.service';
 })
 export class TableListComponent implements OnInit {
 grade:string;
-query:string;
 users:Utilisateur[];
 constructor(private userService:UserService) { }
-
+public query: any = '';
+p: number = 1;
 ngOnInit(): void {
   this.read();
   this.grade=localStorage.getItem("grade");
