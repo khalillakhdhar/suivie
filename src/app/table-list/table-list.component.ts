@@ -9,6 +9,7 @@ import { UserService } from 'app/services/user.service';
 })
 export class TableListComponent implements OnInit {
 grade:string;
+query:string;
 users:Utilisateur[];
 constructor(private userService:UserService) { }
 
