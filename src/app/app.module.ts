@@ -54,7 +54,7 @@ import { SearchPipe } from './pipes/search.pipe';
     AdminLayoutComponent,
     ConnexionComponent,
     InscriptionComponent,
-    SearchPipe,
+    SearchPipe
 
   ],
   providers: [],
