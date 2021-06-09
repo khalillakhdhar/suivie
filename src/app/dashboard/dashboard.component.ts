@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import { UserService } from 'app/services/user.service';
+import { Utilisateur } from 'app/classes/utilisateur';
+import { RecommandationService } from 'app/services/recommandation.service';
+import { Recommandation } from 'app/classes/recommandation';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,8 +11,9 @@ import * as Chartist from 'chartist';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  users:Utilisateur[];
+  recommandations:Recommandation[];
+  constructor(private recommandationService:RecommandationService,private userService:UserService) { }
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
@@ -67,7 +72,8 @@ export class DashboardComponent implements OnInit {
   };
   ngOnInit() {
       /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
-
+      this.readusers();
+      this.read();
       const dataDailySalesChart: any = {
           labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
           series: [
@@ -146,5 +152,51 @@ export class DashboardComponent implements OnInit {
       //start animation for the Emails Subscription Chart
       this.startAnimationForBarChart(websiteViewsChart);
   }
-
+  readusers()
+  {
+    this.userService.read_Users().subscribe(data => {
+  
+      this.users = data.map(e => {
+        return {
+         id: e.payload.doc.id,
+  
+         nom: e.payload.doc.data()["nom"],
+         tel: e.payload.doc.data()["tel"],
+         grade: e.payload.doc.data()["grade"],
+         login: e.payload.doc.data()["login"],
+         mdp: e.payload.doc.data()["mdp"],
+         adresse: e.payload.doc.data()["adresse"],
+  
+  
+  
+        };
+      });
+      console.log(this.users);
+  
+    });
+  
+  
+  }
+  read()
+  {
+    this.recommandationService.read_Recommandations().subscribe(data => {
+  
+      this.recommandations = data.map(e => {
+        return {
+         id: e.payload.doc.id,
+  
+         titre: e.payload.doc.data()["titre"],
+         texte: e.payload.doc.data()["texte"],
+       
+  
+  
+  
+        };
+      });
+      console.log(this.recommandations);
+  
+    });
+  
+  
+  }
 }

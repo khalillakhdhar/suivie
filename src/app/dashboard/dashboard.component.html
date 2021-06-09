@@ -155,7 +155,7 @@
                           <div class="tab-pane active" id="profile">
                               <table class="table">
                                   <tbody>
-                                      <tr>
+                                      <tr *ngFor="let rec of recommandations">
                                           <td>
                                               <div class="form-check">
                                                   <label class="form-check-label">
@@ -166,80 +166,10 @@
                                                   </label>
                                               </div>
                                           </td>
-                                          <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                          <td class="td-actions text-right">
-                                              <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">edit</i>
-                                              </button>
-                                              <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">close</i>
-                                              </button>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <div class="form-check">
-                                                  <label class="form-check-label">
-                                                      <input class="form-check-input" type="checkbox" value="">
-                                                      <span class="form-check-sign">
-                                                          <span class="check"></span>
-                                                      </span>
-                                                  </label>
-                                              </div>
-                                          </td>
-                                          <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                                          <td class="td-actions text-right">
-                                              <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">edit</i>
-                                              </button>
-                                              <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">close</i>
-                                              </button>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <div class="form-check">
-                                                  <label class="form-check-label">
-                                                      <input class="form-check-input" type="checkbox" value="">
-                                                      <span class="form-check-sign">
-                                                          <span class="check"></span>
-                                                      </span>
-                                                  </label>
-                                              </div>
-                                          </td>
-                                          <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                                          </td>
-                                          <td class="td-actions text-right">
-                                              <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">edit</i>
-                                              </button>
-                                              <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">close</i>
-                                              </button>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <div class="form-check">
-                                                  <label class="form-check-label">
-                                                      <input class="form-check-input" type="checkbox" value="" checked>
-                                                      <span class="form-check-sign">
-                                                          <span class="check"></span>
-                                                      </span>
-                                                  </label>
-                                              </div>
-                                          </td>
-                                          <td>Create 4 Invisible User Experiences you Never Knew About</td>
-                                          <td class="td-actions text-right">
-                                              <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">edit</i>
-                                              </button>
-                                              <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                                  <i class="material-icons">close</i>
-                                              </button>
-                                          </td>
-                                      </tr>
+                                          <td>{{rec.titre}}</td>
+                                          
+                                     
+                                     
                                   </tbody>
                               </table>
                           </div>
@@ -376,35 +306,17 @@
                       <table class="table table-hover">
                           <thead class="text-warning">
                               <th>ID</th>
-                              <th>Name</th>
-                              <th>Salary</th>
-                              <th>Country</th>
+                              <th>Nom</th>
+                              <th>Adresse</th>
+                              <th>Téléphone</th>
                           </thead>
                           <tbody>
-                              <tr>
-                                  <td>1</td>
-                                  <td>Dakota Rice</td>
-                                  <td>$36,738</td>
-                                  <td>Niger</td>
-                              </tr>
-                              <tr>
-                                  <td>2</td>
-                                  <td>Minerva Hooper</td>
-                                  <td>$23,789</td>
-                                  <td>Curaçao</td>
-                              </tr>
-                              <tr>
-                                  <td>3</td>
-                                  <td>Sage Rodriguez</td>
-                                  <td>$56,142</td>
-                                  <td>Netherlands</td>
-                              </tr>
-                              <tr>
-                                  <td>4</td>
-                                  <td>Philip Chaney</td>
-                                  <td>$38,735</td>
-                                  <td>Korea, South</td>
-                              </tr>
+                              <tr *ngFor="let us of users">
+                                  <td>{{us.id}}</td>
+                                  <td>{{us.nom}}</td>
+                                  <td>{{us.adresse}}</td>
+                                  <td>{{us.tel}}</td>
+                            
                           </tbody>
                       </table>
                   </div>
