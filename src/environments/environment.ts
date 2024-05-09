@@ -8,12 +8,12 @@ export const environment = {
   firebase:
   {
 
-    apiKey: "AIzaSyB458W8JW5bsfgTBSG7n8o_bDQnBvFy4wk",
-    authDomain: "salle-46c9a.firebaseapp.com",
-    projectId: "salle-46c9a",
-    storageBucket: "salle-46c9a.appspot.com",
-    messagingSenderId: "181595188610",
-    appId: "1:181595188610:web:fc2d20bb13885515cb739b",
-    measurementId: "G-K0L62JLXLC"
+    apiKey: "AIzaSyBqUmYO3KznEJaSzfHkwh3ULX-LNoR8f1c",
+    authDomain: "medical-dd248.firebaseapp.com",
+    projectId: "medical-dd248",
+    storageBucket: "medical-dd248.appspot.com",
+    messagingSenderId: "518789872630",
+    appId: "1:518789872630:web:26312948308685fde225d7",
+    measurementId: "G-KK8QYSE6NS"
   }
 };
